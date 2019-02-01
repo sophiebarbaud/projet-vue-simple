@@ -1,9 +1,25 @@
-<!DOCTYPE>
-<html>
-<head>
+	<!DOCTYPE>
+	<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<meta charset="utf-8">
+		<script>
+			fetch('https://artmely.com/wp-json/wp/v2/posts')
+			.then(function(response) {
+				response.json()
+				.then(function(response){
+				console.log(response)
+				vm.posts = response
+			})
+			})
+		</script>
+
+	</head>
+
 	<title> Test Git </title>
-</head>
-<body>
-	<h1> Test 2 </h1>
-</body>
-</html>
+
+	<body>
+		<h1> Test 2 </h1>
+	</body>
+	</html>
